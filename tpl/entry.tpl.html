@@ -5,7 +5,7 @@
 </p>
 <a href="index.php?action=entry&id={entry_id}">Direktlink</a><br />
 <hr>
-<h2>Kommentare</h2>
+<h2><a name="comments">Kommentare</a></h2>
 	<!-- BEGIN comment -->
 	<div class=commenthead><a href="{comment_link}">{comment_username}</a> - {comment_time}</div>
 	<div class=commenttext>{comment_text}</div>
@@ -18,6 +18,6 @@
 	Name: <INPUT type="text" name="username" /><br />
 	Email/URL: <INPUT type="text" name="link" /><br />
 	Kommentar:<br />
-	<TEXTAREA name="text"></TEXTAREA><br />
+	<TEXTAREA name="text" rows=10 cols=60></TEXTAREA><br />
 	<INPUT type="submit" value="Kommentar abschicken"/>
 </form>

@@ -220,6 +220,10 @@ else if ($_GET[action] != "") {
 		# main-template laden
 		$tpl->loadTemplatefile("index.tpl.html", true, true);
 		$tpl->SetVariable("titel",$entry[title]);
+		$tpl->SetVariable("entry_id",$entry[entry_id]);
+		$number_comments = get_number_of_comments($entry[entry_id]);
+		$tpl->SetVariable("anz_kommentare",$number_comments[0]['COUNT(*)']);
+		
 		$tpl->SetVariable("artikel",$entry[artikel]);
 		$tpl->SetVariable("date",$entry[date]);
 		$tpl->SetVariable("text",nl2br($entry[text]));

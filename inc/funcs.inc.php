@@ -91,7 +91,9 @@ require_once "inc/db_wrap_mysql.php";
 		 		
   }
 	
-	
+	function get_number_of_comments($entry_id) {
+		return return_query("SELECT COUNT(*) FROM `enz_comments` WHERE entry_ref=$entry_id");
+	}
 	
 	
 	function get_latest_article() {
@@ -121,9 +123,10 @@ require_once "inc/db_wrap_mysql.php";
 	  }
 		// andere ersetzungen
 		
-		
-		
-    return $entry;
+	// URLS 	
+	$entry = preg_replace( "`(http|ftp)+(s)?:(//)((\w|\.|\-|_)+)(/)?(\S+)?`i", "<a href=\"\\0\" target=\"_blank\">\\4</a>", $entry);  
+	
+	return $entry;
 	}		
 
 ?>
