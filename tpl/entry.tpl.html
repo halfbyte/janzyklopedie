@@ -1,0 +1,23 @@
+<h1>{titel}, {artikel}</h1>
+<i>{date}</i><br>
+<p>	 			
+<b>{titel}, {artikel}</b> -- {text}
+</p>
+<a href="index.php?action=entry&id={entry_id}">Direktlink</a><br />
+<hr>
+<h2>Kommentare</h2>
+	<!-- BEGIN comment -->
+	<div class=commenthead><a href="{comment_link}">{comment_username}</a> - {comment_time}</div>
+	<div class=commenttext>{comment_text}</div>
+	<!-- END comment -->
+<hr>
+<h2>Kommentieren</h2>
+<form action="index.php" method="POST">
+	<INPUT type="hidden" name="action" value="comment"/>
+	<INPUT type="hidden" name="id" value="{entry_id}"/>
+	Name: <INPUT type="text" name="username" /><br />
+	Email/URL: <INPUT type="text" name="link" /><br />
+	Kommentar:<br />
+	<TEXTAREA name="text"></TEXTAREA><br />
+	<INPUT type="submit" value="Kommentar abschicken"/>
+</form>

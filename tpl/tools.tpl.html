@@ -1,0 +1,44 @@
+<h1>Toolbox</h1>
+<h2>Actions</h2>
+
+	<a href="index.php?action=logout">Logout</a><br>
+        <a href="javascript:addSideBar()">Add Sidebar</a><br>
+
+
+<h2>New Entry</h2>
+<form action = "index.php" method = "post">
+<select name = "artikel" size="1">
+	<option value = "der">der</option>
+	<option value = "die">die</option>
+	<option value = "das">das</option>
+</select>
+<input type = "text" name = "titel"><br>
+<textarea rows = "20" cols = "60" name = "text"></textarea><br>
+
+<input type = "submit" value="save">
+<input type = "hidden" name = "action" value = "new">
+</form>
+
+
+<h2>Modify entries</h2>
+<form action="index.php" method="POST">
+
+<select name = "entry_id" size="1">
+<!-- BEGIN eintrag -->
+<option value="{entry_id}">{entry_id}){titel}</option>
+<!-- END eintrag -->
+</select>
+<br>
+
+<input type = "radio" name = "action" value = "kill"> Kill<br>
+<input type = "radio" name = "action" value = "edit"> Edit<br>
+<input type = "radio" name = "action" value = "cacheupdate"> Clear cache<br>
+
+
+
+<br>
+<input type = "submit" value="eggsecute">
+
+
+</form>
+	

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Janzyklopedia - {titel}</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script language="JavaScript">
+  function addSideBar() { 
+    if ((typeof window.sidebar == "object") && (typeof window.sidebar.addPanel == "function")) { 
+      window.sidebar.addPanel ("Janzyklopedia",
+"http://jan.krutisch.de/janzyklopedie/sidebar.php",""); 
+    }
+  }
+</script>
+
+</head>
+<body>
+<table width="60%" align="center">
+<tr>
+<td>
+<b>janzyklopedie v1.0</b><br>
+<hr>
+<div class="menu">
+<a href="index.php">home</a>
+| <a href="index.php?action=list">komplette liste</a> 
+| <a href="index.php?action=latest">neueinträge</a> 
+| <a href="/index.php?id=2">mail</a>
+| <a href="index.php?action=tools">&pi;</a>
+</div> 
+<hr>

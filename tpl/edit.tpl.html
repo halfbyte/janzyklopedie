@@ -1,0 +1,17 @@
+<h1>Toolbox</h1>
+<h2>Edit Entry</h2>
+<form action = "index.php" method = "post">
+<select name = "artikel" size="1">
+<!-- BEGIN artikelchoose -->
+<option value = "{artikel}" {selected}>{artikel}</option>
+<!-- END artikelchoose -->
+</select>
+<input type = "text" name = "titel" value = "{titel}"><br>
+<textarea rows = "20" cols = "60" name = "text">{text}</textarea><br>
+
+<input type = "submit" value="save">
+<input type = "hidden" name = "entry_id" value = "{entry_id}">
+<input type = "hidden" name = "action" value = "save">
+
+</form>
+	
